@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="categories-container">
+      <div className="category-container">
+        {/* <img/> */}
+        <div className="category-body-container">
+          <h2>Капелюхи</h2>
+          <p>Перейти до магазину</p>
+        </div>
+      </div>
+      <div className="category-container">
+        {/* <img/> */}
+        <div className="category-body-container">
+          <h2>Куртки</h2>
+          <p>Перейти до магазину</p>
+        </div>
+      </div>
+      <div className="category-container">
+        {/* <img/> */}
+        <div className="category-body-container">
+          <h2>Взуття</h2>
+          <p>Перейти до магазину</p>
+        </div>
+      </div>
+      <div className="category-container">
+        {/* <img/> */}
+        <div className="category-body-container">
+          <h2>Жінкам</h2>
+          <p>Перейти до магазину</p>
+        </div>
+      </div>
+      <div className="category-container">
+        {/* <img/> */}
+        <div className="category-body-container">
+          <h2>Чоловікам</h2>
+          <p>Перейти до магазину</p>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
