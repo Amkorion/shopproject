@@ -1,8 +1,22 @@
-import Directory from "./components/Directory/Directory";
-import CategoriesData from "./components/categories-data/categories-data.jsx";
+import { Routes, Route } from "react-router-dom";
+import Home from "./components/routes/home/Home.component";
+import Navigation from "./components/routes/navigation/navigation.component";
+import SignIn from "./components/routes/sign-in/sign-in.component";
+
+const Shop = () => {
+  return <h1>I am the shop page</h1>;
+};
 
 const App = () => {
-  return <Directory Categories={CategoriesData} />;
+  return (
+    <Routes>
+      <Route path="/" element={<Navigation />}>
+        <Route index element={<Home />} />
+        <Route path="shop" element={<Shop />} />
+        <Route path="sign-in" element={<SignIn />} />
+      </Route>
+    </Routes>
+  );
 };
 
 export default App;
