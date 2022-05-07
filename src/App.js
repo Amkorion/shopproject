@@ -4,7 +4,7 @@ import Navigation from "./components/routes/navigation/navigation.component";
 import SignIn from "./components/routes/sign-in/sign-in.component";
 
 const Shop = () => {
-  return <h1>I am the shop page</h1>;
+  return <h1>Вітаємо на сторінці магазину</h1>;
 };
 
 const App = () => {
