@@ -5,14 +5,14 @@ import { ReactComponent as Logo } from "../../../assets/086 crown.svg";
 import "./navigation.styles.scss";
 import { UserContext } from "../../../contexts/user.context";
 import { signOutUser } from "../../../utils/firebase/firebase.utils";
+import CartIcon from "../../cart-icon/cart.component";
+import CartDropdown from "../../cart-dropdown/cart-dropdown.component";
+import { CartContext } from "../../../contexts/cart-dropdown.context";
 
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
+  const { isCartOpen } = useContext(CartContext);
 
-  // const signOutHandler = async () => {
-  //   await signOutUser();
-  //   setCurrentUser(null);
-  // };
   return (
     <Fragment>
       <div className="navigation">
@@ -32,7 +32,9 @@ const Navigation = () => {
               Реєстрація
             </Link>
           )}
+          <CartIcon />
         </div>
+        {isCartOpen && <CartDropdown />}
       </div>
       <Outlet />
     </Fragment>
