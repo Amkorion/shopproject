@@ -39,7 +39,8 @@ const SignUpForm = () => {
       await createUserDocumentFromAuth(user, { displayName });
       resetFormFields();
 
-      //! TODO alert("Дякуюємо за реєстрацію") на случай если не будет дургого визуала
+      // TODO alert("Дякуюємо за реєстрацію") на случай если не будет дургого визуала
+      //
     } catch (error) {
       if (error.code === "auth/email-already-in-use") {
         alert("Користувач з таким email вже зареєстрований");
