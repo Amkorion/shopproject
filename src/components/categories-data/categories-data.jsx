@@ -21,13 +21,13 @@ const CategoriesData = [
     id: 4,
     title: "Для Жінок",
     imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
-    route: "shop/для жінок",
+    route: "shop/жінкам",
   },
   {
     id: 5,
     title: "Для Чоловіків",
     imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
-    route: "shop/для чоловіків",
+    route: "shop/чоловікам",
   },
 ];
 
