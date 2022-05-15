@@ -1,35 +1,41 @@
-import "./checkout.styles.scss";
+import "./checkout.styles.jsx";
 import { useContext } from "react";
 import { CartContext } from "../../../contexts/cart-dropdown.context";
 import CheckoutItem from "../../checkout-items/checkout-items";
+import {
+  CheckoutContainer,
+  CheckoutHeader,
+  HeaderBlock,
+  TotalContainer,
+} from "./checkout.styles.jsx";
 
 const Checkout = () => {
   const { cartItems, cartTotal } = useContext(CartContext);
 
   return (
-    <div className="checkout-container">
-      <div className="checkout-header">
-        <div className="header-block">
+    <CheckoutContainer>
+      <CheckoutHeader>
+        <HeaderBlock>
           <span>Товар</span>
-        </div>
-        <div className="header-block">
+        </HeaderBlock>
+        <HeaderBlock>
           <span>Назва</span>
-        </div>
-        <div className="header-block">
+        </HeaderBlock>
+        <HeaderBlock>
           <span>Кількість</span>
-        </div>
-        <div className="header-block">
+        </HeaderBlock>
+        <HeaderBlock>
           <span>Ціна</span>
-        </div>
-        <div className="header-block">
+        </HeaderBlock>
+        <HeaderBlock>
           <span>Вилучити</span>
-        </div>
-      </div>
+        </HeaderBlock>
+      </CheckoutHeader>
       {cartItems.map((cartItem) => (
         <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
-      <span className="total">Загальна вартість: ₴{cartTotal}</span>
-    </div>
+      <TotalContainer>Загальна вартість: ₴{cartTotal}</TotalContainer>
+    </CheckoutContainer>
   );
 };
 
