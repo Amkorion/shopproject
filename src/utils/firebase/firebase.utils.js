@@ -17,7 +17,6 @@ import {
   collection,
   writeBatch,
   query,
-  qetDocs,
   getDocs,
 } from "firebase/firestore";
 
